@@ -1,8 +1,8 @@
 package org.oncare.cucumber.stepDef;
 
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
-import cucumber.api.java.en.And;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.When;
+import io.cucumber.java.en.Then;
 import org.oncare.cucumber.runner.TestState;
 import org.oncare.selenium.page.DressesPage;
 import org.junit.Assert;

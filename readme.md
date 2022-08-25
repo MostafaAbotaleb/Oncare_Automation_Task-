@@ -11,4 +11,4 @@
 * Hook has been split into 2 files (GlobalHooks-ScenarioHooks) to run some code before/After the test is start and the other before each Scenario
 * For the locator we use ENUM
 * For the Runner we use Junit
-* The Cucumber report is generated in target folder
+* The Cucumber report is generated in target folder or online on the  https://reports.cucumber.io/reports/ (the link is generated in the console)

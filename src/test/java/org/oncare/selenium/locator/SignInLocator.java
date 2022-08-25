@@ -16,8 +16,6 @@ public enum SignInLocator implements Locator {
     daysDropdown(By.id("days")),
     monthsDropdown(By.id("months")),
     yearsDropdown(By.id("years")),
-    firstNameAddress(By.id("firstname")),
-    lastNameAddress(By.id("lastname")),
     companyField(By.id("company")),
     addressField(By.id("address1")),
     cityField(By.id("city")),

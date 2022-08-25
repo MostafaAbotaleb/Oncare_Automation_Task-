@@ -1,7 +1,7 @@
 package org.oncare.cucumber.stepDef;
 
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import org.junit.Assert;
 import org.oncare.cucumber.runner.TestState;
 import org.oncare.selenium.page.SignInPage;
