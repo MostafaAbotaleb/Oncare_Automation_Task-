@@ -25,7 +25,7 @@ public class SignInPage extends PageObject {
     public  void createNewAccount() {
         driver.waitVisibilityOf(emailField.by(), 10);
 
-        driver.sendKeysTo(emailField,"username1000"+ driver.randomIntger() +"@gmail.com");
+        driver.sendKeysTo(emailField,"username9999"+ driver.randomIntger() +"@hotmail.com");
 
         driver.clickOn(submitButton);
         driver.clickOn(genderRadioButton);
