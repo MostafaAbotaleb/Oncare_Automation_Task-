@@ -3,10 +3,14 @@ package org.oncare.selenium.page;
 
 import org.oncare.selenium.driver.CustomWebDriver;
 import org.oncare.selenium.page.core.PageObject;
+
+import static org.oncare.selenium.driver.CustomWebDriver.pro;
 import static org.oncare.selenium.locator.DressesLocator.*;
 
 
 public class DressesPage extends PageObject {
+
+
     public DressesPage(CustomWebDriver driver) {
         super(driver, DressesPage.class.getName());
     }
@@ -18,8 +22,14 @@ public class DressesPage extends PageObject {
 
 
         driver.waitVisibilityOf(orangeColor.by(), 10);
-         driver.clickOn(orangeColor);
-        driver.clickOn(orangeColor);
+
+        driver.streamFilter(allProducts,allNamesOfProducts, "Printed Summer Dress");
+
+        pro.findElement(orangeColor.by()).click();
+        pro.findElement(orangeColor.by()).click();
+
+
+
         driver.selectByIndex(sizesDropdown.by(),2);
 
 
@@ -30,6 +40,7 @@ public class DressesPage extends PageObject {
     public void addToTheCart(){
         driver.clickOn(addToCartButton);
     }
+
 
     public void proceedToCheckout() {
 
@@ -54,11 +65,7 @@ public class DressesPage extends PageObject {
        return driver.getText(orderConfirmationmessage.by());
     }
 
-    public String getTheOrderReference() {
 
-      return  driver.getText(boxOfOrederDetails.by());
-
-    }
 
     public void openTheOrderhistorypage() {
         driver.clickOn(myOrdersHistory);

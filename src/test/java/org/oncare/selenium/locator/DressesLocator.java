@@ -22,7 +22,10 @@ public enum DressesLocator implements Locator {
     orderConfirmationmessage(By.cssSelector("p[class='cheque-indent']")),
     boxOfOrederDetails(By.xpath("//*[@id='center_column']/div")),
     myOrdersHistory(By.cssSelector("a[title='My orders']")),
-    orderStatus(By.cssSelector("td[class='history_state']"));
+    orderStatus(By.cssSelector("td[class='history_state']")),
+    allProducts(By.cssSelector(".product-container")),
+    allNamesOfProducts(By.cssSelector("h5"));
+
 
 
 

@@ -14,7 +14,7 @@ public class DressesStepDef extends AbstractStepDef {
         super(state, DressesStepDef.class.getName());
     }
 
-//    String expectedReferenceOrder;
+
     @And("^select a dress$")
     public void selectADress() {
 
@@ -27,6 +27,7 @@ public class DressesStepDef extends AbstractStepDef {
     public void addToTheCart() {
         DressesPage dressesPage= new DressesPage(state.getDriver());
         dressesPage.addToTheCart();
+
     }
 
     @And("^proceed to checkout$")
@@ -51,10 +52,7 @@ public class DressesStepDef extends AbstractStepDef {
     public void theOrderRequestIsCompleted() {
         DressesPage dressesPage= new DressesPage(state.getDriver());
         Assert.assertEquals("the order confirmation message is not appear","Your order on My Store is complete.",dressesPage.getOrderConfirmationmessage());
-//        String a= dressesPage.getTheOrderReference();
-//        String [] splited =a.split("reference");
-//        String [] aa = splited[1].split("in");
-//        expectedReferenceOrder = splited[0].trim();
+
 
     }
 

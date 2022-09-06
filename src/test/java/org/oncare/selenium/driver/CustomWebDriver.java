@@ -1,7 +1,6 @@
 package org.oncare.selenium.driver;
 
 import org.apache.log4j.Logger;
-
 import org.oncare.selenium.locator.core.Locator;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -18,6 +17,7 @@ import java.util.stream.IntStream;
 
 
 public class CustomWebDriver {
+    static public WebElement pro;
     private static final Logger logger = Logger.getLogger(CustomWebDriver.class.getName());
     private final WebDriver driver;
 
@@ -182,7 +182,20 @@ public class CustomWebDriver {
     public void selectByIndex(By by, int index) {
         final Select combo = new Select(driver.findElement(by));
         combo.selectByIndex(index);
+
     }
+
+    public void streamFilter(Locator locator1,Locator locator2,  String productName){
+        List<WebElement> products=driver.findElements(locator1.by());
+          pro= products.stream().filter(product->
+                product.findElement(locator2.by()).getText()
+                        .equals(productName)).findFirst().orElse(null);
+
+
+
+    }
+
+
     public void selectByValue(By by, String value) {
         final Select combo = new Select(driver.findElement(by));
         combo.selectByValue(value);
