@@ -18,20 +18,15 @@ public class DressesPage extends PageObject {
 
 
 
-    public void selectDresses()  {
+    public void selectDresses(String dressName)  {
 
 
         driver.waitVisibilityOf(orangeColor.by(), 10);
 
-        driver.streamFilter(allProducts,allNamesOfProducts, "Printed Summer Dress");
-
+        driver.streamFilter(allProducts,allNamesOfProducts, dressName);
         pro.findElement(orangeColor.by()).click();
         pro.findElement(orangeColor.by()).click();
-
-
-
         driver.selectByIndex(sizesDropdown.by(),2);
-
 
         }
 

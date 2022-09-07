@@ -46,6 +46,7 @@ public class CustomWebDriver {
         sendKeysTo(locator.by(), text);
     }
 
+
     public void sendKeysTo(By by, String text) {
         waitVisibilityOf(by, 120);
         driver.findElement(by).sendKeys(text);
@@ -66,9 +67,7 @@ public class CustomWebDriver {
         clickOn(locator.by());
     }
 
-    public void forceClickElement(WebElement element) {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
-    }
+
 
     public void waitVisibilityOf(By by, int timeOut) {
         WebDriverWait wait = new WebDriverWait(driver, timeOut);

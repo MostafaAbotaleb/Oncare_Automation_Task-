@@ -15,11 +15,11 @@ public class DressesStepDef extends AbstractStepDef {
     }
 
 
-    @And("^select a dress$")
-    public void selectADress() {
+    @And("select a dress name {string}")
+    public void selectADress(String dressName) {
 
         DressesPage dressesPage= new DressesPage(state.getDriver());
-        dressesPage.selectDresses();
+        dressesPage.selectDresses(dressName);
 
     }
 
@@ -64,4 +64,6 @@ public class DressesStepDef extends AbstractStepDef {
 
 
     }
+
+
 }
