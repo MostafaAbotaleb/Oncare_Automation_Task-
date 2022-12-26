@@ -29,11 +29,15 @@ public class SignInStepDef extends AbstractStepDef {
 
 
     @And("using random email {string} to create a new account")
+    public void usingEmailToCreateANewAccount2(String email) {
+        SignInPage signInPage = new SignInPage(state.getDriver());
+        signInPage.typeRandomEmail(email);
+    }
+    @And("using random email {string} to create a new account")
     public void usingEmailToCreateANewAccount1(String email) {
         SignInPage signInPage = new SignInPage(state.getDriver());
         signInPage.typeRandomEmail(email);
     }
-
 
 
 
