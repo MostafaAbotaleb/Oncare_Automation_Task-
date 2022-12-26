@@ -42,11 +42,7 @@ public class SignInStepDef extends AbstractStepDef {
         });
 
         signInPage.typeIntFields("5","6","1987","32","21");
-
     }
-
-
-
     @And("using random email {string} to create a new account")
     public void usingEmailToCreateANewAccount(String email) {
         SignInPage signInPage = new SignInPage(state.getDriver());
