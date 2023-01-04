@@ -42,6 +42,7 @@ public enum SignInLocator implements Locator {
 //    @Override2
 //    @Override3
 //    @Override5
+
     public By by() {
         logger.trace("locator");
         return locator;
