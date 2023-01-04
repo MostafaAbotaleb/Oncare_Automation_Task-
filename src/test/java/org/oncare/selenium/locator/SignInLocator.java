@@ -6,6 +6,7 @@ import org.oncare.selenium.locator.core.Locator;
 import org.openqa.selenium.By;
 
 public enum SignInLocator implements Locator {
+    //Locators
     signInTap(By.xpath("//a[@ class='login']")),
     emailField(By.id("email_create")),
     submitButton(By.xpath("//button[@ name='SubmitCreate']")),
@@ -26,10 +27,6 @@ public enum SignInLocator implements Locator {
     addressAliasField(By.id("alias")),
     registerButton(By.id("submitAccount")),
     dressesTab(By.xpath("//a[@title='Dresses']"));
-
-
-
-
 
     static Logger logger = Logger.getLogger(SignInLocator.class.getName());
     private By locator;
